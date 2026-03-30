@@ -1,0 +1,112 @@
+# Library Management System
+
+Totalbooks = 100
+
+PP = 25
+ACDE = 25
+AP = 25
+PY = 25
+
+while True:
+
+    print("\nWhat do you want (issuing / returning / availability / exit)?")
+    N = input().lower()
+
+    
+    if N == "issuing":
+
+        print("Name of the book (PP / ACDE / AP / PY):")
+        M = input().upper()
+
+        Numberofbooks = int(input("Enter number of books: "))
+
+        if M == "PP":
+            print("Number of PP books available before =", PP)
+
+            if PP >= Numberofbooks:
+                PP = PP - Numberofbooks
+                print("Number of PP books available after issuing =", PP)
+            else:
+                print("Not enough books")
+
+        elif M == "ACDE":
+            print("Number of ACDE books available before =", ACDE)
+
+            if ACDE >= Numberofbooks:
+                ACDE = ACDE - Numberofbooks
+                print("Number of ACDE books available after issuing =", ACDE)
+            else:
+                print("Not enough books")
+
+        elif M == "AP":
+            print("Number of AP books available before =", AP)
+
+            if AP >= Numberofbooks:
+                AP = AP - Numberofbooks
+                print("Number of AP books available after issuing =", AP)
+            else:
+                print("Not enough books")
+
+        elif M == "PY":
+            print("Number of PY books available before =", PY)
+
+            if PY >= Numberofbooks:
+                PY = PY - Numberofbooks
+                print("Number of PY books available after issuing =", PY)
+            else:
+                print("Not enough books")
+
+        else:
+            print("Invalid Input")
+
+
+    elif N == "returning":
+
+        print("Name of the book (PP / ACDE / AP / PY):")
+        M = input().upper()
+
+        Numberofbooks = int(input("Enter number of books: "))
+
+        if M == "PP":
+            print("Number of PP books available before =", PP)
+            PP = PP + Numberofbooks
+            print("Number of PP books after returning =", PP)
+
+        elif M == "ACDE":
+            print("Number of ACDE books available before =", ACDE)
+            ACDE = ACDE + Numberofbooks
+            print("Number of ACDE books after returning =", ACDE)
+
+        elif M == "AP":
+            print("Number of AP books available before =", AP)
+            AP = AP + Numberofbooks
+            print("Number of AP books after returning =", AP)
+
+        elif M == "PY":
+            print("Number of PY books available before =", PY)
+            PY = PY + Numberofbooks
+            print("Number of PY books after returning =", PY)
+
+        else:
+            print("Invalid Input")
+
+
+    elif N == "availability":
+
+        Totalbooks = PP + ACDE + AP + PY
+
+        print("\nCurrent Availability")
+        print("PP =", PP)
+        print("ACDE =", ACDE)
+        print("AP =", AP)
+        print("PY =", PY)
+        print("Total books available =", Totalbooks)
+
+
+    elif N == "exit":
+        print("Thank you for using our library system.")
+        break
+
+
+    else:
+        print("Invalid Input")
